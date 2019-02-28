@@ -1,3 +1,157 @@
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T111953.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T111941.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+<> 2019-02-28T111859.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+<> 2019-02-28T111832.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T110958.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T100513.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T100118.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/1
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T100038.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T100007.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T095745.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+GET http://localhost:3001/api/persons/4
+Accept: application/json
+
+<> 2019-02-28T095614.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T095443.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+GET http://localhost:3001/api/persons/4
+Accept: application/json
+
+<> 2019-02-28T095422.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+<> 2019-02-28T095404.404.html
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T095314.200.json
+
+###
+
+DELETE http://localhost:3001/notes/4
+
+###
+
+DELETE https://localhost:3001/notes/4
+
+###
+
 GET http://localhost:3001/api/persons/4
 Accept: application/json
 
