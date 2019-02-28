@@ -1,3 +1,52 @@
+GET http://localhost:3001/api/persons/4
+Accept: application/json
+
+<> 2019-02-28T094002.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T093819.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T093805.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T093729.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T093639.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-02-28T093529.500.html
+
+###
+
+GET http://localhost:3001/api/person/1
+Accept: application/json
+
+<> 2019-02-28T093446.404.html
+
+###
+
 GET http://localhost:3001/api/persons
 Accept: application/json
 
