@@ -1,0 +1,24 @@
+GET http://localhost:3001/api/persons
+Accept: application/json
+
+<> 2019-02-28T092010.200.json
+
+###
+
+GET https://localhost:3001/api/persons
+Accept: application/json
+
+###
+
+GET https://localhost:3001/api/persons
+
+###
+
+GET https://localhost:3001/api/persons
+
+###
+
+GET https://localhost:3001/api/persons
+
+###
+
