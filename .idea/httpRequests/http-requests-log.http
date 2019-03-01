@@ -1,6 +1,156 @@
 GET http://localhost:3001/api/persons
 Accept: application/json
 
+<> 2019-03-01T011130.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T011101.200.json
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-03-01T011054.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T010510.404.html
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-03-01T010323.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T122715.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T122620.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T122533.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T122511.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+
+  "number": "123-456789",
+  "id": ""
+}
+
+<> 2019-03-01T122250.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789",
+  "id": ""
+}
+
+<> 2019-03-01T122025.404.html
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T121839.404.html
+
+###
+
+GET http://localhost:3001/api/persons/1
+Accept: application/json
+
+<> 2019-03-01T121813.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Aleksi Aho",
+  "number": "123-456789"
+}
+
+<> 2019-03-01T121734.404.html
+
+###
+
+GET http://localhost:3001/api/persons
+Accept: application/json
+
 <> 2019-02-28T111953.200.json
 
 ###
@@ -205,23 +355,6 @@ GET http://localhost:3001/api/persons
 Accept: application/json
 
 <> 2019-02-28T092010.200.json
-
-###
-
-GET https://localhost:3001/api/persons
-Accept: application/json
-
-###
-
-GET https://localhost:3001/api/persons
-
-###
-
-GET https://localhost:3001/api/persons
-
-###
-
-GET https://localhost:3001/api/persons
 
 ###
 
