@@ -1,2 +1,2 @@
 Link for the application: 
-https://mobile-and-web-part3.herokuapp.com/api/persons
+https://mobile-and-web-part3.herokuapp.com
