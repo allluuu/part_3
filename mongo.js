@@ -12,7 +12,8 @@ let db = mongoose.connection
 
 const Person = mongoose.model('Person', {
     name: String,
-    number: String
+    number: String,
+    id: String
 })
 
 const person = new Person({

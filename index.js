@@ -3,29 +3,22 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose')
-
-
-//db url
-const url = 'mongodb+srv://user-aleksi:TurunYliopisto@mobile-and-web-part3-db-wlthn.mongodb.net/test?retryWrites=true'
+mongoose.set('useFindAndModify', false)
+const Person = require('./models/person')
 
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('build'));
 
-//connection to db
-mongoose.connect(url, { useNewUrlParser: true }, function (err) {
-    if (err) throw err;
-    console.log('connected')
-})
 
-let db = mongoose.connection
-
-const Person = mongoose.model('Person', {
-    name: String,
-    number: String
-})
-
+const formatPerson = (person) => {
+    return {
+        name: person.name,
+        number: person.number,
+        id: person._id
+    }
+}
 
 
 
@@ -33,7 +26,7 @@ app.get('/api/persons', (request, response) => {
     Person
         .find({})
         .then(persons => {
-            response.json(persons)
+            response.json(persons.map(formatPerson))
         })
 })
 
@@ -45,33 +38,22 @@ app.get('/api/persons/:id', (request, response) => {
                 response.json(person)
             } else { response.status(404).end()}
         })
-   /* used this before db
-    const person = persons.filter(person => person.id === id)
-
-    if (person) {
-        response.json(person)
-    } else {
-        response.status(404).end()
-    } */
 })
 
 app.delete('/api/persons/:id', (request, response) => {
-    const id = (request.params.id)
-
+    const id = (request.params._id)
     Person
-        .findOneAndDelete(id, {findOneAndDelete: false})
-        .then(person => {
-            response.status(204).end()
-            console.log(`person ${person.name} deleted`)
+        .findByIdAndRemove(id, function (err) {
+            if (err) {
+                response.send(err)
+            }
         })
-
-    /*
-    person = persons.filter(person => person.id !== id)
-
-    persons = person
-
-    response.status(204).end()*/
-})
+        .then(person => {
+            response.status(200).end()
+            console.log({message: `person deleted}`})
+            console.log(String(id))
+            }
+        )})
 
 const generateId = () => {
     let random = Math.random()+1
@@ -79,28 +61,18 @@ const generateId = () => {
 }
 
 app.post('/api/persons', (request, response) => {
-
     const person = new Person(request.body)
-    person.save((err, person) => {
-        if (err) return next(err)
-        response.json(person)
-    })
 
+    if (request.body === undefined) {
+        return response.status(400).json({error: 'content missing'})
+    }
 
-
-
-
-
+    person
+        .save()
+        .then(savedPerson => {
+            response.json(formatPerson(savedPerson))
+        })
     /*
-    const body = request.body
-
-    if (body.name === undefined) {
-        return response.status(400).json({error: 'name missing'})
-    }
-
-    if (body.number === undefined) {
-        return response.status(400).json({error: 'number missing'})
-    }
     const person_list =persons.map(person => person.name)
 
     if (person_list.includes(body.name)){
