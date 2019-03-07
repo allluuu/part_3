@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e037c4a1-369d-477d-a2a8-79127c7baa26" name="Default Changelist" comment="" />
+    <list default="true" id="e037c4a1-369d-477d-a2a8-79127c7baa26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -173,7 +175,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -603,7 +605,7 @@
       <updated>1551380356891</updated>
       <workItem from="1551380358208" duration="5377000" />
       <workItem from="1551389049913" duration="7806000" />
-      <workItem from="1551522358356" duration="39822000" />
+      <workItem from="1551522358356" duration="40470000" />
     </task>
     <task id="LOCAL-00001" summary="3.1 Phone directory backend, part 1">
       <created>1551381788806</created>
@@ -658,7 +660,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53005000" />
+    <option name="totallyTimeSpent" value="53653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -670,7 +672,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.66443455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

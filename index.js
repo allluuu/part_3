@@ -38,6 +38,9 @@ app.get('/api/persons/:id', (request, response) => {
                 response.json(person)
             } else { response.status(404).end()}
         })
+        .catch(error => {
+            response.status(400).send({error: `no ${id} found`})
+        })
 })
 
 app.delete('/api/persons/:id', (request, response) => {
