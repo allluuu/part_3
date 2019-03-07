@@ -41,19 +41,16 @@ app.get('/api/persons/:id', (request, response) => {
 })
 
 app.delete('/api/persons/:id', (request, response) => {
-    const id = (request.params._id)
+    const id = (request.params.id)
     Person
-        .findByIdAndRemove(id, function (err) {
-            if (err) {
-                response.send(err)
-            }
+        .findByIdAndRemove(id)
+        .then(result => {
+            response.status(204).end()
         })
-        .then(person => {
-            response.status(200).end()
-            console.log({message: `person deleted}`})
-            console.log(String(id))
-            }
-        )})
+        .catch(error => {
+            response.status(400).send({error: 'malformatted id'})
+        })
+})
 
 const generateId = () => {
     let random = Math.random()+1
