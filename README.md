@@ -1,2 +1,2 @@
 Link for the application: 
-https://dashboard.heroku.com/apps/calm-caverns-90926
+https://calm-caverns-90926.herokuapp.com/
