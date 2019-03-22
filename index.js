@@ -28,6 +28,9 @@ app.get('/api/persons', (request, response) => {
         .then(persons => {
             response.json(persons.map(formatPerson))
         })
+        .catch(error => {
+        response.status(400).send({error: `error in finding persons`})
+    })
 })
 
 app.get('/api/persons/:id', (request, response) => {
@@ -51,7 +54,7 @@ app.delete('/api/persons/:id', (request, response) => {
             response.status(204).end()
         })
         .catch(error => {
-            response.status(400).send({error: 'malformatted id'})
+            response.status(400).send({error: `no ${id} found`})
         })
 })
 
@@ -62,15 +65,26 @@ const generateId = () => {
 
 app.post('/api/persons', (request, response) => {
     const person = new Person(request.body)
+    console.log(`reguest body: ${person}`)
 
-    if (person === undefined) {
-        return response.status(400).json({error: 'content missing'})
+
+    if (person.name === '') {
+        console.log('fill name')
+        return response.status(400).json({error: 'name missing'})
+    }
+
+    if (person.number === '') {
+        console.log('fill number')
+        return response.status(400).json({error: 'number missing'})
     }
 
     person
         .save()
         .then(savedPerson => {
             response.json(formatPerson(savedPerson))
+        })
+        .catch( error => {
+            response.status(400).send({error: `error in save`})
         })
     /*
     const person_list =persons.map(person => person.name)

@@ -5,6 +5,6 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
-DELETE  http://localhost:3001/api/persons/5c810f61eccdac32f07fc22d
+DELETE  http://localhost:3001/api/persons/5c810f61eccdac2f07fc22d
 
 ###
